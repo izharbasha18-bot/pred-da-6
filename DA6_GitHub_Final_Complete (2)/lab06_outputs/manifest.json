@@ -1,0 +1,83 @@
+{
+  "data_mode": "DEMO",
+  "datasets": {
+    "Chicago": {
+      "source": "https://data.cityofchicago.org/Public-Safety/Crimes-2001-to-Present/ijzp-q8t2",
+      "api": "https://data.cityofchicago.org/resource/ijzp-q8t2.json",
+      "location_field": "district",
+      "date_field": "date",
+      "location": "001"
+    },
+    "NYPD": {
+      "source": "https://data.cityofnewyork.us/Public-Safety/NYPD-Complaint-Data-Historic/qgea-i56i",
+      "api": "https://data.cityofnewyork.us/resource/qgea-i56i.json",
+      "location_field": "boro_nm",
+      "date_field": "cmplnt_fr_dt",
+      "location": "MANHATTAN"
+    }
+  },
+  "date_window": [
+    "2020-01-01",
+    "2025-12-31"
+  ],
+  "frequency": "W-MON",
+  "test_periods": 12,
+  "validation_periods": 12,
+  "ar_lags": 4,
+  "arima_candidates": [
+    [
+      1,
+      0,
+      0
+    ],
+    [
+      2,
+      0,
+      0
+    ],
+    [
+      1,
+      1,
+      1
+    ],
+    [
+      2,
+      1,
+      1
+    ]
+  ],
+  "selected_arima": {
+    "Chicago": [
+      1,
+      0,
+      0
+    ],
+    "NYPD": [
+      2,
+      0,
+      0
+    ]
+  },
+  "adf": {
+    "Chicago": {
+      "statistic": -4.897591270502208,
+      "p_value": 3.525281930557745e-05
+    },
+    "NYPD": {
+      "statistic": -6.216660210116966,
+      "p_value": 5.345360970041153e-08
+    }
+  },
+  "ljung_box": {
+    "Chicago": {
+      "lag": 10,
+      "p_value": 1.0219645152738047e-11
+    },
+    "NYPD": {
+      "lag": 10,
+      "p_value": 0.017740876413533866
+    }
+  },
+  "python": "3.13.5 (main, Jul 15 2026, 20:25:40) [GCC 14.2.0]",
+  "platform": "Linux-6.18.35-x86_64-with-glibc2.41"
+}
