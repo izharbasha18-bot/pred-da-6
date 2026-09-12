@@ -1,8 +1,3 @@
 # Source
 
-The complete implementation for this DA-6 experiment is contained in
-`DA6_Time_Series_Crime_Forecasting.ipynb`.
-
-The notebook includes data preparation, weekly aggregation, chronological
-splitting, baseline/AR/ARIMA modelling, diagnostics, rolling validation,
-plots, result-table generation, and reproducibility checks.
+The DA-4 implementation is contained in the executed Jupyter notebook at the repository root. This folder is reserved for reusable source modules if the project is later modularized.
