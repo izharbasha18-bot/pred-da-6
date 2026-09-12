@@ -1,0 +1,12 @@
+{
+  "include": [
+    "src",
+    "training.py",
+    "pipeline.py"
+  ],
+  "extraPaths": [
+    "C:\\Users\\izhar\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages",
+    "C:\\Users\\izhar\\AppData\\Local\\Python\\pythoncore-3.14-64\\Lib\\site-packages",
+    "c:\\Users\\izhar\\Downloads\\DA6_GitHub_Final_Complete (2)"
+  ]
+}
